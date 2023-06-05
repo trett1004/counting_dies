@@ -1,7 +1,6 @@
 # Dies
 
 ## Purpose
-git
 The programm counts two rolled dies. It will ask you for the first and then for the second die with inputfields.
 
 ## What is being counted.
