@@ -27,4 +27,7 @@ Right now the programm is canceled by clicking twice on cancel for each input wi
 The results are visible in the console. There could be a visual output in the html of the numbers or maybe also a graph.
 
 ### Errorhandling
-There is no errorhandling. If you type in a number < 1 or > 6 it will be counted and saved in an object..
+There is no errorhandling. If you type in a number < 1 or > 6 it will be counted and saved in an object.
+
+### Separate JS Code
+The JS is written within the html file. The js could be written in a separate file,
