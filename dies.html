@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Titel</title>
+        <style></style>
+        
+        <script>
+            'use strict';
+
+            let dieOne;
+            let dieTwo;
+            let sumDieDieTwo;
+            let roundCount = -1
+            let dieHeightArr = [{1:0}, {2:0}, {3:0}, {4:0}, {5:0}, {6:0}]
+            let sumHeightArr = [{2:0}, {3:0}, {4:0}, {5:0}, {6:0}, {7:0}, {8:0}, {9:0}, {10:0}, {11:0}, {12:0}]
+            // Ask for first die
+            while (true) {
+                dieOne = Number(prompt("First die:"));
+                // ask for second die
+                dieTwo = Number(prompt("Second die:"));
+                // count round
+                roundCount += 1;
+                // count numberheight of first die
+                // count numberheigth of second die
+                // count sum of dies
+
+                if (dieOne === 0) {
+                    console.log('quitted');
+                    break;
+                }
+
+                for (let i = 0; i < dieHeightArr.length; i++) {
+                    if (dieOne == i+1) {
+                        dieHeightArr[i][i+1] += 1;
+                    }
+                }
+
+                for (let i = 0; i < dieHeightArr.length; i++) {
+                    if (dieTwo == i+1) {
+                        dieHeightArr[i][i+1] += 1;
+                    }
+                }
+
+                sumDieDieTwo = dieOne + dieTwo
+                for (let i = 0; i < sumHeightArr.length; i++) {
+                    const sumKey = Object.keys(sumHeightArr[i])[0];
+                    if (sumDieDieTwo == sumKey) {
+                    sumHeightArr[i][sumKey] += 1;
+                    }
+                console.log("diedietwo:", sumDieDieTwo)
+                }
+            }
+            // console.log("dieHeightArr[0]:", dieHeightArr[0])
+            // console.log("dieHeightArr[1]:", dieHeightArr[1])
+            // console.log("dieHeightArr:", dieHeightArr);
+            console.log("Wie oft kamen die Wuerfelzahlen:")
+            for (let i = 0; i < dieHeightArr.length; i++) {
+                console.log(dieHeightArr[i])
+            }
+
+            console.log("Zahlenhaufigkeit")
+            for (let i = 0; i < sumHeightArr.length; i++) {
+                console.log(sumHeightArr[i])
+            }
+
+            console.log("wie oft wurde gewuerfelt?")
+            console.log(roundCount)
+
+
+
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
