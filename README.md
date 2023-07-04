@@ -1,5 +1,6 @@
 # Dies!
 ## Description
+## Features
 ## Purpose
 The programm counts two rolled dies. It will ask you for the first and then for the second die with inputfields.
 
